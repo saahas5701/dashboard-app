@@ -83,7 +83,7 @@ dashboard-app/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/dashboard-app.git
+git clone https://github.com/saahas5701/dashboard-app.git
 cd dashboard-app
 ```
 
@@ -167,8 +167,8 @@ Projects have a clear relationship to users (foreign key). Relational data fits 
 **Why Context API over Redux?**
 For an app of this size, Context API + useState is sufficient. Redux adds complexity that isn't justified here. The auth state (user, login, logout) is the only global state needed.
 
-**Why `COALESCE` in UPDATE queries?**
-Allows partial updates — you can update just the title without needing to send all other fields. The database keeps existing values for anything not provided.
+***Why Partialupdates?**
+The API allows users to update only the fields they want to change without sending the entire object again. Existing values are preserved when a field is not provided.
 
 **Assumptions**
 - One user can have many projects (1:N relationship)
@@ -179,11 +179,19 @@ Allows partial updates — you can update just the title without needing to send
 
 ---
 
-## Screenshots
+## Demo Video
+A complete walkthrough of the application is available below:
 
-> *(Add screenshots of Landing, Dashboard, Projects, Profile pages here)*
+Loom Video: https://www.loom.com/share/d3c06dd8e602438abee0ee1bb1548b23
 
----
+The demo covers:
+- User Registration
+- User Login
+- Dashboard Overview
+- Project Creation
+- Project Management (Create, Edit, Delete)
+- Profile Updates
+- Protected Routes & Authentication
 
 ## Known Limitations
 
